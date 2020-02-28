@@ -26,6 +26,10 @@ const LoginForm = () => {
                 history.push('/jokes')
             })
             .catch(err=>console.log(err))
+            setNewUser({
+                username: '',
+                password: ''
+            })
     }
 
 
