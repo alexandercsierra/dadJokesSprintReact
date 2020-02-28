@@ -1,9 +1,10 @@
 import React, {useState} from 'react'
 import axios from 'axios'
 import {Button, Input, Form} from '../../styles'
+import {useHistory} from 'react-router-dom'
 
 const SignupForm = () => {
-
+    const history = useHistory();
     const [newUser, setNewUser] = useState({
         username: '',
         password: ''
@@ -19,7 +20,9 @@ const SignupForm = () => {
     const onSubmit = e => {
         e.preventDefault();
         axios.post('http://localhost:3300/api/auth/register', newUser)
-            .then(res=>console.log(res))
+            .then(res=>{
+                history.push('/login')
+            })
             .catch(err=>console.log(err))
     }
 
