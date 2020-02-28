@@ -48,9 +48,18 @@ const H1 = styled.h1`
                0 20px 20px rgba(0,0,0,.15);
 `;
 
+const JokeCard = styled.div`
+    background: white;
+    margin: 4%;
+    padding: 2%;
+    width: 20%;
+    box-shadow: 0.3em 0.3em 1em rgba(0,0,0,0.3);
+`;
+
 export {
     Button,
     Input,
     Form,
-    H1
+    H1,
+    JokeCard
 }

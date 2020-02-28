@@ -31,7 +31,7 @@ const SignupForm = () => {
     return (
         <Form onSubmit={onSubmit}>
             <Input name='username' placeholder='username' autoComplete='off' onChange={handleChange} value={newUser.username}/>
-            <Input name='password' placeholder='password' autoComplete='off' onChange={handleChange} value={newUser.password}/>
+            <Input name='password' type='password' placeholder='password' autoComplete='off' onChange={handleChange} value={newUser.password}/>
             <Button>Submit</Button>
         </Form>
     )
