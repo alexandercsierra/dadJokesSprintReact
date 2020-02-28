@@ -1,5 +1,6 @@
 import React, {useState} from 'react'
 import axios from 'axios'
+import {Button, Input, Form} from '../../styles'
 
 const SignupForm = () => {
 
@@ -25,11 +26,11 @@ const SignupForm = () => {
 
 
     return (
-        <form onSubmit={onSubmit}>
-            <input name='username' placeholder='username' autoComplete='off' onChange={handleChange} value={newUser.username}/>
-            <input name='password' placeholder='password' autoComplete='off' onChange={handleChange} value={newUser.password}/>
-            <button>Submit</button>
-        </form>
+        <Form onSubmit={onSubmit}>
+            <Input name='username' placeholder='username' autoComplete='off' onChange={handleChange} value={newUser.username}/>
+            <Input name='password' placeholder='password' autoComplete='off' onChange={handleChange} value={newUser.password}/>
+            <Button>Submit</Button>
+        </Form>
     )
 }
 

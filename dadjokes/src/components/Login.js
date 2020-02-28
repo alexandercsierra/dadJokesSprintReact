@@ -1,10 +1,11 @@
 import React from 'react'
 import LoginForm from './forms/LoginForm'
+import {H1} from '../styles'
 
 const Login = () => {
     return (
         <div>
-            <h1>Login</h1>
+            <H1>Login</H1>
             <LoginForm/>
         </div>
     )

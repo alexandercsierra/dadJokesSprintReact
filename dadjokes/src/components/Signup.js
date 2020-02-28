@@ -1,10 +1,11 @@
 import React from 'react'
 import SignupForm from './forms/SignupForm'
+import {H1} from '../styles'
 
 const Signup = () => {
     return (
         <div>
-            <h1>Signup</h1>
+            <H1>Signup</H1>
             <SignupForm/>
         </div>
     )

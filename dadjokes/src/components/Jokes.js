@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react'
 import {axiosWithAuth as axios} from '../utils/axiosWithAuth'
+import {H1} from '../styles'
 
 const Jokes = () => {
     const [jokes, setJokes] = useState([]);
@@ -13,7 +14,7 @@ const Jokes = () => {
 
     return (
         <div>
-            <h1>Jokes</h1>
+            <H1>Jokes</H1>
             <div>
                 {jokes && jokes.map(joke=>{
                     return(

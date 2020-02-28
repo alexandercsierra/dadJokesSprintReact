@@ -1,8 +1,10 @@
 import React, {useState} from 'react'
 import axios from 'axios'
+import {Button, Input, Form} from '../../styles'
+import {useHistory} from 'react-router-dom'
 
 const LoginForm = () => {
-
+    const history = useHistory();
     const [newUser, setNewUser] = useState({
         username: '',
         password: ''
@@ -21,10 +23,7 @@ const LoginForm = () => {
             .then(res=>{
                 console.log('the token', res.data.token);
                 localStorage.setItem('token', res.data.token);
-                setNewUser({
-                    username: '',
-                    password: ''
-                })
+                history.push('/jokes')
             })
             .catch(err=>console.log(err))
     }
@@ -32,11 +31,11 @@ const LoginForm = () => {
 
 
     return (
-        <form onSubmit={onSubmit}>
-            <input name='username' placeholder='username' autoComplete='off' onChange={handleChange} value={newUser.username}/>
-            <input name='password' placeholder='password' autoComplete='off' onChange={handleChange} value={newUser.password}/>
-            <button>Submit</button>
-        </form>
+        <Form onSubmit={onSubmit}>
+            <Input name='username' placeholder='username' autoComplete='off' onChange={handleChange} value={newUser.username}/>
+            <Input name='password' placeholder='password' autoComplete='off' onChange={handleChange} value={newUser.password}/>
+            <Button>Submit</Button>
+        </Form>
     )
 }
 
